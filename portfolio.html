@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View the portfolio and past work of AMC Painting Company. See our premium interior and exterior painting projects.">
+    <title>Portfolio | AMC Painting Company</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: var(--radius);
+            overflow: hidden;
+            aspect-ratio: 4/3;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+        }
+        .gallery-item:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 2rem 1.5rem 1.5rem;
+            color: white;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header>
+        <div class="container nav-container">
+            <a href="index.html" class="logo-container">
+                <img src="logo.jpg" alt="AMC Painting Company Logo" class="logo-img">
+            </a>
+            
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About Us</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link active">Portfolio</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.html" class="btn btn-primary">Get a Quote</a>
+            </nav>
+
+            <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Page Hero -->
+        <section class="page-hero">
+            <div class="container animate-on-scroll">
+                <h1 class="page-hero-title">Our Past Work</h1>
+                <p class="section-subtitle" style="color: rgba(255,255,255,0.9); max-width: 700px; margin: 0 auto;">Take a look at some of our recent interior, exterior, and residential painting projects.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section class="section bg-surface">
+            <div class="container">
+                <div class="text-center animate-on-scroll">
+                    <h2 class="section-title">Project Gallery</h2>
+                    <p class="section-subtitle">We take pride in every brushstroke. Here is a showcase of the premium finishes we deliver.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <!-- Gallery Item 1 -->
+                    <div class="gallery-item animate-on-scroll">
+                        <img src="images/gallery-1.jpg" alt="Exterior Home Painting">
+                        <div class="gallery-overlay">
+                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0;">Exterior Home Painting</h3>
+                        </div>
+                    </div>
+                    
+                    <!-- Gallery Item 2 -->
+                    <div class="gallery-item animate-on-scroll delay-1">
+                        <img src="images/gallery-2.jpg" alt="Interior Living Space">
+                        <div class="gallery-overlay">
+                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0;">Modern Interior Living Space</h3>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 3 -->
+                    <div class="gallery-item animate-on-scroll delay-2">
+                        <img src="images/gallery-3.jpg" alt="Premium Cabinet Painting">
+                        <div class="gallery-overlay">
+                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0;">Premium Cabinet Painting</h3>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 4 -->
+                    <div class="gallery-item animate-on-scroll">
+                        <img src="images/gallery-4.jpg" alt="Commercial Exterior">
+                        <div class="gallery-overlay">
+                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0;">Commercial Exterior</h3>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 5 -->
+                    <div class="gallery-item animate-on-scroll delay-1">
+                        <img src="images/gallery-5.jpg" alt="Detailed Trim Work">
+                        <div class="gallery-overlay">
+                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0;">Detailed Trim Work</h3>
+                        </div>
+                    </div>
+
+                    <!-- Gallery Item 6 -->
+                    <div class="gallery-item animate-on-scroll delay-2">
+                        <img src="images/gallery-6.jpg" alt="Complete Home Makeover">
+                        <div class="gallery-overlay">
+                            <h3 style="color: white; font-size: 1.25rem; margin-bottom: 0;">Complete Home Makeover</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="cta-section">
+            <div class="container animate-on-scroll">
+                <h2>Ready to be our next success story?</h2>
+                <p style="font-size: 1.25rem; margin-bottom: 2.5rem; max-width: 600px; margin-left: auto; margin-right: auto;">Contact us today to schedule your consultation and get a detailed, transparent price quote.</p>
+                <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                    <a href="contact.html" class="btn" style="background-color: var(--primary); color: white;">Request a Quote</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <div class="footer-logo">
+                        <h3 style="color: white; font-family: var(--font-heading); margin-bottom: 0;">AMC PAINTING</h3>
+                        <span style="font-family: var(--font-body); font-size: 0.8rem; letter-spacing: 2px;">COMPANY</span>
+                    </div>
+                    <p class="footer-desc">Professional interior and exterior painting services focusing on quality workmanship, clean finishes, and reliable service.</p>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Our Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Interior Painting</a></li>
+                        <li><a href="services.html">Exterior Painting</a></li>
+                        <li><a href="services.html">Cabinet Painting</a></li>
+                        <li><a href="services.html">Deck Staining</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="footer-heading">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            215-872-4306
+                        </li>
+                        <li>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            amcpaintingcompany@gmail.com
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 AMC Painting Company. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
